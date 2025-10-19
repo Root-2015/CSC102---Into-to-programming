@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Example</title>
+    <link rel="stylesheet" href="Main.CSS">
+</head>
+<body>
+    <header>
+        <h1>Input Example</h1>
+    </header>
+    <main>
+        <!-- Form - post is the best option; use Get for testing if needed
+         - action is the name of the page that the form will pst to
+         - we skip form post in this class
+         - set the name and Id to the same value -->
+        <form method="post" action="#" name="FrmInput" id="FrmInput" onsubmit="return false"> 
+            <!-- Label helps people know what they need to put into a text box -->
+            <label for="txtFirstName">First Name:</label>
+            <!-- this is the text box and the example that is inside of it -->
+            <input type="text" name="txtFirstName" id="txtFirstName" placeholder="John">
+            <br>
+        
+            <label for="txtLastName">Last Name:</label>
+        
+            <input type="text" name="txtLastName" id="txtLastName" placeholder="Smith">
+            <br>
+           
+            <label for="txtZipcode"> Zip code:</label>
+            
+            <input type="text" name="txtZipcode" id="txtZipcode" placeholder="July">
+            <br>
+            <button onclick="validateForm();"> Save Inputs </button>
+        </form>
+
+        <Script src="dice code.js"> </script>
+
+    </main>
+</body>
+</html>
