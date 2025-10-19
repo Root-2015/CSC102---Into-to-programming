@@ -63,7 +63,7 @@
         else (code = true)
         {
         //Secrete message if players do it right
-        secrete = "You did it "+FirstName}
-        console.log(message || secrete) 
+        message = "You did it "+ FirstName}
+        console.log(message) 
         document.getElementById("divMessage").textContent = message;
     }
