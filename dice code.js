@@ -67,3 +67,34 @@
         console.log(message) 
         document.getElementById("divMessage").textContent = message;
     }
+            //Index code to move images
+            //keeps track of speed and who fast the image moves
+            let intervalID=0;
+            //this function starts the picture movement
+            function startImage(){
+                //create shortcut to the image in Index
+                let image = document.getElementById("MemeImage");
+               
+                intervalID = setInterval(function(){
+                    let xCord = getRandNum();
+                    let yCord = getRandNum();
+
+                    image.style.left = xCord + "px"
+                    image.style.top = yCord + "px"
+            },1000); //Ever second
+            //swap the butions off/on
+            document.getElementById("startImage").disabled = true;
+            document.getElementById("endImage").disabled = false;
+            }
+            //Random number generator
+            function getRandNum(){
+                //number between 0-799
+                return Math.floor(Math.random()*900)
+            }
+            //stopes the image from moving
+            function stopImage(){
+                clearInterval(intervalID)
+            //activate the on/off
+            document.getElementById("startImage").disabled = false;
+            document.getElementById("endImage").disabled = true;
+            }
