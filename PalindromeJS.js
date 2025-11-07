@@ -2,8 +2,6 @@
     //Grabs user input and gets rid of spaces at the end and begining of the value
     let userInput = document.getElementById("txtInput").value.trim();
     
-    console.log("userInput=" + userInput);
-
     isPalendrome(userInput);
     //this does not need ==true because its implied
     if (isPalendrome(userInput)){
@@ -21,16 +19,12 @@ function isPalendrome(wordToTest){
     //gets rid of upper case letters
     cleanedWord = cleanedWord.toLowerCase();
 
-    console.log("cleanedWord=" + cleanedWord);
-
     //convert clean sting to an array.
     let arrCleaned = cleanedWord.split("");
     //revers array content
     arrCleaned = arrCleaned.reverse();
-    //turn it back to an array
+    //turn it back to a string
     let reversedWord = arrCleaned.join("");
-    console.log("reversedWord=" + reversedWord);
-
     //compare if cleaned and reversed word is the same
     return cleanedWord == reversedWord;
 }
