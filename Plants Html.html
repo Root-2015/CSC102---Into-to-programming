@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>List of current plants</h2>
+    <div>
+        <!-- ul is an unorthidox list, it is realy good used wiht arrays -->
+        <ul id="ulPlants">
+
+        </ul>
+        <h3>Add a plant</h3>
+        <input type="text" id = "txtNewPlant">
+        <button onclick="addPlant(),showPlants()">Add Plant</button>
+    </div>
+</body>
+    <!-- When Finished move to seprete Js File -->
+    <script>
+        //if we need to store 20 things but we can stre them better in a data structure like an array
+        let plant1 = "Rose"
+        let plant2 = "Nightshade"
+        let plant3 = "Sunflower"
+        let plant4 = "Cactus"
+        let plant5 = "Tree"
+        let plant6 = "Fern"
+
+        let arrPlants = ["Rose","Nightshade","Sunflower","Cactus","Tree","Fern"]
+
+        function addPlant(){
+            // get the new plant in buttion
+            let newPlant = document.getElementById("txtNewPlant").value;
+            //adds the variable to the array
+            arrPlants.push(newPlant);
+        }
+
+        function showPlants (){
+            //shortcut to Ul
+            let ulPlant = document.getElementById("ulPlants");
+            //use a foreach loop to run through the list
+            arrPlants.forEach(function(plant, index){
+                //create the list using Java
+                let li = document.createElement("li");
+                li.textContent = plant;
+                // this will add the new list to the existing list
+                ulPlant.appendChild(li);
+            });
+        }
+        showPlants();
+    </script>
+</html>
