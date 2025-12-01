@@ -1,0 +1,35 @@
+<!-- Tylers Secrte words -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Words</title>
+</head>
+<body>
+    <main>
+        <h1>Secrete Words!</h1>
+        <!-- mainbuttion -->
+        <form onsubmit = "return false;">
+            <label for="txtInput1">Type Word Here</label>
+            <input type="text" id="txtInput1" required>
+            <button onclick="checksecret();">Conform</button>
+        </form>
+        <!-- palendrom buttion -->
+        <form onsubmit = "return false;" id="pal" hidden="true">
+            <label for="txtInput">Type Word Here</label>
+            <input type="text" id="txtInput" required>
+            <button  onclick="testAibohphobia();" >Test palemdrome Word</button>
+        </form>
+        <Div id="divSecret"></Div>
+        <Div id="divResult"></Div>
+        <div id="divAudio"></div>
+        <img id="MemeImage" src="c9d9728992965f49d0bb64fc5590ea5367ae0b7ce6d450b61ade20382e805ebf_1.jpg" width="200" hidden="true">
+        <img id="MemeImage2" src="Palindromes.jpg" width="200" hidden="true">
+        <button id="btnAddAudio" onclick="addAudio()" hidden="true">Add Audio</button>
+        <script src="Sound.js"></script>
+        <script src="PalindromeJS.js"></script>
+        <script src="Secret checker.js"></script>
+    </main>
+</body>
+</html>
