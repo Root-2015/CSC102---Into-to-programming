@@ -1,0 +1,26 @@
+table{
+    max-width: 400px;
+    /* MultiBorders in a sertain area will be colaped into one (Makes it look nicer) */
+    border-collapse: collapse;
+}
+/* adds more area between rows and makes the text snape to the left of the text box */
+tr,th,td{
+    padding: 10px;
+    text-align: left;
+}
+/* Makes the border pink */
+tr,td{
+    border: 2px solid rgb(241, 5, 241);
+}
+/* makes all even rows white */
+tr:nth-child(even),th{
+    background-color: white;
+}
+/* makes all odd rows yellow */
+tr:nth-child(odd){
+    background-color: rgb(238, 240, 104);
+}
+/* when hovering over a row it turns it blue */
+tr:hover{
+    background-color: rgb(5, 255, 255);
+}

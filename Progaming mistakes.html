@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="Main.CSS">
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <main>
+        
+        <h1>
+            Progaming mistakes
+        </h1>
+        <table id="tbleData">
+            <caption>
+                Progaming mistakes and the costs
+            </caption>
+            <!-- Table Row -->
+            <tr>
+                <!-- Table Heading -->
+                <th>Project</th>
+                <th>Year</th>
+                <th>Cost</th>
+                <!-- Table Data -->
+            </tr>
+        </table>
+    </main>
+    <script>
+        
+        //load data into table
+        function loadData(){
+            //2D array
+            let arrProblems = [
+                ["crowdstrike",2024,"$5.4B"],
+                ["FaceBook",2020,"$90M"],
+                ["Citibank",2020,"$900M"],
+                ["Mars Climate Orbiter",1999,"327M"]
+            ];
+            //nested for loops to display te data
+            for (let i=0; i < arrProblems.length; i++){
+                //create table row
+                let tr = document.createElement("tr");
+                //loop through each nested array
+                for(let j=0; j < arrProblems[i].length; j++){
+                    let td = document.createElement("td");
+                    //put the data in the td
+                    td.textContent = arrProblems[i][j];
+                    //append the new data to existing row
+                    tr.appendChild(td);
+                }
+                //add the new row to the existing table
+                document.getElementById("tbleData").appendChild(tr);
+            }
+            
+        }
+        loadData();
+    </script>
+</body>
+</html>
