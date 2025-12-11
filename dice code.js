@@ -60,7 +60,7 @@
         if (Zipcode.length != 5){
             message = message + " Your zip code is 5 charectors"
         }
-        else (code = true)
+        else (code == true)
         {
         //Secrete message if players do it right
         message = "You did it "+ FirstName}
