@@ -50,6 +50,7 @@
         // Zip needs to be 5 digits
         FullName = FirstName + " " + LastName
         console.log(FullName)
+        code = false
         if (FullName.length > 20 || FullName.length == 1){
             //invaled name
             message = "Name was spelt incorectly or done wrong."
